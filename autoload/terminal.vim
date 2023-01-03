@@ -120,14 +120,14 @@ endfu
 
 fu! terminal#runShow(cmd)
   call terminal#go(0)
-  call chansend(s:jobId, [a:cmd, ''])
+  call chansend(s:jobId, [a:cmd, ''])
   norm G
   wincmd K
 endfu
 
 fu! terminal#runHide(cmd)
   call terminal#go(1)
-  call chansend(s:jobId, [a:cmd, ''])
+  call chansend(s:jobId, [a:cmd, ''])
 endfu
 
 fu! terminal#hide()
@@ -143,7 +143,7 @@ fu! terminal#kill()
 endfu
 
 fu! terminal#changeCur()
-  call chansend(s:jobId, [terminal#systemCd(expand('%:p:h')), ''])
+  call chansend(s:jobId, [terminal#systemCd(expand('%:p:h')), ''])
 endfu
 
 fu! terminal#winIds(dict)
