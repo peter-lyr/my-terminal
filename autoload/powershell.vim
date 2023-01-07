@@ -54,14 +54,14 @@ endfu
 
 fu! powershell#runShow(cmd)
   call powershell#go()
-  call chansend(s:jobId, [a:cmd, ''])
+  call chansend(s:jobId, [a:cmd, ''])
   norm G
   wincmd K
 endfu
 
 fu! powershell#runHide(cmd)
   call powershell#go(1)
-  call chansend(s:jobId, [a:cmd, ''])
+  call chansend(s:jobId, [a:cmd, ''])
 endfu
 
 fu! powershell#hide()
