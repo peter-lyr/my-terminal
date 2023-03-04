@@ -54,14 +54,14 @@ endfu
 
 fu! bash#runShow(cmd)
   call bash#go(0)
-  call chansend(s:jobId, [a:cmd, ''])
+  call chansend(s:jobId, [a:cmd, ''])
   norm G
   wincmd K
 endfu
 
 fu! bash#runHide(cmd)
   call bash#go(1)
-  call chansend(s:jobId, [a:cmd, ''])
+  call chansend(s:jobId, [a:cmd, ''])
 endfu
 
 fu! bash#hide()
@@ -77,6 +77,6 @@ fu! bash#kill()
 endfu
 
 fu! bash#changeCur()
-  call chansend(s:jobId, ['cd ' .substitute(expand('%:p:h'), '\', '/', 'g'), ''])
+  call chansend(s:jobId, ['cd ' .substitute(expand('%:p:h'), '\', '/', 'g'), ''])
 endfu
 
